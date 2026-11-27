@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employees>
+  <employee id="0001" active="true"><name>John Smith</name><email>john@example.com</email><department>IT</department><salary>65000</salary></employee>
+  <employee id="0002" active="false"><name>Mary Jones</name><email>mary@example.com</email><department>HR</department><salary>55000</salary></employee>
+</employees>

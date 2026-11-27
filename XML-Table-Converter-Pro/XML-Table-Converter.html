@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>XML Table Converter Pro</title><link rel="stylesheet" href="assets/css/styles.css"></head>
+<body>
+<header><div class="brand"><div class="logo">X</div><div><b>XML Table Converter Pro</b><small>Local XML workspace</small></div></div><div class="header-right">
+ <div class="status"><i></i><span class="offline-label">OFFLINE MODE</span><span class="version-label">v1.11.1</span></div>
+ <button id="shortcutsBtn" class="ghost shortcuts-btn">⌘ Shortcuts</button>
+ <button id="themeBtn" class="ghost theme-toggle">☾ Dark</button>
+ <strong class="developer-tag">Developed by CHARAN</strong>
+</div></header>
+<main>
+<section class="hero"><div><div class="eyebrow">PRIVATE · LOCAL · NO UPLOADS</div><h1>Turn XML into<br><em>structured tables.</em></h1><p>Convert XML files into searchable, sortable tables and export them — entirely on this computer.</p></div><div class="hero-art"><div class="file-icon">XML</div><div class="arrow">→</div><div class="table-icon"><b>▤</b><small>TABLE</small></div></div></section>
+<section class="panel input-panel"><div class="section-head"><div><h2>Input XML</h2><p>Paste XML, choose a file, or drop it here.</p></div><div class="actions"><button class="ghost" id="formatXmlBtn">Format XML</button><button class="ghost" id="validateXmlBtn">Validate</button><button class="ghost" id="copyInputBtn">Copy XML</button><button class="ghost" id="sampleBtn">Load sample</button><button class="ghost" id="clearBtn">Clear</button></div></div>
+<div class="editor-shell">
+ <div class="editor-body"><div id="lineNumbers" class="line-numbers">1</div><textarea id="xmlInput" spellcheck="false" placeholder="Paste XML here…" wrap="off"></textarea></div>
+</div>
+<div class="upload-row"><label class="file-button">Choose XML file<input type="file" id="fileInput" accept=".xml,.txt,application/xml,text/xml"></label><span id="fileMeta">No file selected</span><span class="drop-hint">or drag and drop an XML file here</span><button class="primary" id="convertBtn">Convert to tables <b>→</b></button></div></section>
+<section class="panel progress-panel hidden" id="progressPanel"><div class="progress-top"><b id="progressStatus">Preparing…</b><span id="progressPct">0%</span></div><div class="progress-track"><div id="progressBar"></div></div><div class="progress-bottom"><span id="progressMeta">Starting parser</span><button class="danger" id="cancelBtn">Cancel</button></div></section>
+<section class="results hidden" id="results">
+<div class="result-head"><div><div class="eyebrow">CONVERSION RESULT</div><h2>Your data, organized.</h2></div><div class="exports"><button id="csvBtn" class="ghost">↓ CSV</button><button id="xlsxBtn" class="ghost">↓ XLSX</button><button id="htmlBtn" class="ghost">↓ HTML</button><button id="xmlBtn" class="ghost">↓ Selected XML</button><button id="filteredCsvBtn" class="ghost">↓ Filtered CSV</button></div></div>
+<div class="stats"><div><small>ROWS</small><strong id="rowCount">0</strong></div><div><small>COLUMNS</small><strong id="colCount">0</strong></div><div><small>TABLES</small><strong id="tableCount">0</strong></div><div><small>FILE SIZE</small><strong id="sizeStat">—</strong></div></div>
+<div class="table-panel"><div class="table-toolbar"><div class="tabs" id="tableTabs"></div><div class="table-tools"><input id="searchInput" placeholder="Search this table…"><select id="pageSize"><option>25</option><option>50</option><option>100</option><option>500</option><option value="all">All rows</option></select><button id="columnsBtn" class="ghost">Columns ▾</button></div></div><div id="columnMenu" class="column-menu hidden"></div>
+<div class="table-actions"><button id="clearFiltersBtn" class="ghost">Clear all filters</button><button id="fitContentBtn" class="ghost">Fit columns to values</button><button id="fitTableBtn" class="ghost">Fit table to width</button><button id="gridToggleBtn" class="ghost" aria-pressed="true">Hide table grid</button><button id="selectFilteredBtn" class="ghost">Select filtered</button><button id="clearSelectionBtn" class="ghost">Clear selection</button><span class="copy-actions"><button id="copyJsonBtn" class="ghost">Copy selected JSON</button><button id="copyXmlBtn" class="ghost">Copy selected XML</button><button id="copyCsvBtn" class="ghost">Copy selected CSV</button><button id="copyExcelBtn" class="ghost">Copy selected for Excel</button></span></div><div class="table-wrap grid-visible"><table><thead id="thead"></thead><tbody id="tbody"></tbody></table></div><div class="table-footer"><span id="rangeLabel">No records</span><span id="selectedLabel">0 selected</span><div><button class="ghost" id="prevBtn">←</button><span id="pageLabel">1 / 1</span><button class="ghost" id="nextBtn">→</button></div></div></div>
+</section>
+<footer><span>XML Table Converter Pro</span><span>All processing happens locally in your browser.</span></footer>
+</main>
+<div id="noticeHost" class="notice-host" aria-live="polite"></div>
+<div id="appDialog" class="app-dialog hidden" role="dialog" aria-modal="true"><div class="dialog-card"><div class="dialog-mark">i</div><h3 id="dialogTitle">Notice</h3><p id="dialogMessage"></p><div class="dialog-actions"><button id="dialogClose" class="primary">OK</button></div></div></div>
+<script src="assets/js/app.js"></script>
+</body></html>

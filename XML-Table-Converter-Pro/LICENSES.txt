@@ -1,0 +1,1 @@
+Original source code in this package. No third-party runtime libraries are bundled. Windows PowerShell, the browser, and their platform components remain subject to their respective vendor licenses.
